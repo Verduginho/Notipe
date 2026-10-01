@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="#F4F7FE"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvPermisoNombreTienda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Tienda Lima"
+        android:textColor="#2B3674"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- El interruptor moderno de Android (Switch) -->
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchPermisoTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Material3.Light" />
+
+</LinearLayout>

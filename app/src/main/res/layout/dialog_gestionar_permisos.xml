@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvNombreCajeroPermisos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Accesos de: Cajero"
+            android:textColor="#2B3674"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Activa las tiendas donde este usuario puede ver pagos."
+            android:textColor="#A3AED0"
+            android:textSize="12sp" />
+
+        <!-- Aquí aparecerá la lista de tiendas con sus interruptores -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTiendasSwitches"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnCerrarPermisos"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:backgroundTint="#42A5F5"
+            android:text="LISTO"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

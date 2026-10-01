@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FE"> <!-- Fondo claro corporativo -->
+
+    <!-- BARRA LATERAL FIJA (Sidebar) -->
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:elevation="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Ícono Principal / Logo de Rol -->
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="40dp"
+            android:src="@android:drawable/ic_dialog_info"
+            app:tint="#42A5F5" />
+
+        <!-- Opción 1: Dashboard (Resumen General) -->
+        <ImageView
+            android:id="@+id/nav_dashboard"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="40dp"
+            android:src="@android:drawable/ic_menu_info_details"
+            app:tint="#42A5F5" /> <!-- Azul (Activo por defecto) -->
+
+        <!-- Opción 2: Pagos (Feed de Yapes / Rayitas) -->
+        <ImageView
+            android:id="@+id/nav_pagos"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="40dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:tint="#A3AED0" /> <!-- Gris (Inactivo) -->
+
+        <!-- Opción 3: Tiendas -->
+        <ImageView
+            android:id="@+id/nav_tiendas"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="40dp"
+            android:src="@android:drawable/ic_dialog_map"
+            app:tint="#A3AED0" />
+
+        <!-- Opción 4: Empleados -->
+        <ImageView
+            android:id="@+id/nav_empleados"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="40dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:tint="#A3AED0" />
+
+        <!-- Opción 5: Lista Negra / Ajustes -->
+        <ImageView
+            android:id="@+id/nav_ajustes"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="40dp"
+            android:src="@android:drawable/ic_menu_preferences"
+            app:tint="#A3AED0" />
+    </LinearLayout>
+
+    <!-- CONTENEDOR DINÁMICO (Aquí inyectaremos los Fragmentos) -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sidebar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

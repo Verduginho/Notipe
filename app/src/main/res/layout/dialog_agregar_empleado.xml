@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Nuevo Cajero"
+        android:textColor="#2B3674"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Campo: Nombre Completo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre o Alias"
+        android:textColor="#A3AED0"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etNombreEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#42A5F5"
+        android:hint="Ej. Juan Pérez"
+        android:inputType="textPersonName"
+        android:textColor="#2B3674" />
+
+    <!-- Campo: Usuario de acceso -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario para iniciar sesión"
+        android:textColor="#A3AED0"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etUsuarioEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#42A5F5"
+        android:hint="Ej. juan123"
+        android:inputType="textNoSuggestions"
+        android:textColor="#2B3674" />
+
+    <!-- Campo: Contraseña -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña (PIN)"
+        android:textColor="#A3AED0"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/etClaveEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#42A5F5"
+        android:hint="****"
+        android:inputType="numberPassword"
+        android:maxLength="6"
+        android:textColor="#2B3674" />
+
+    <!-- Botones de Acción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:textColor="#A3AED0" />
+
+        <Button
+            android:id="@+id/btnGuardarEmpleado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#42A5F5"
+            android:text="Crear Cajero"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

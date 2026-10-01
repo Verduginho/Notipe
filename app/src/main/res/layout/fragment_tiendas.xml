@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Fila superior: Título y Botón -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gestión de Tiendas"
+            android:textColor="#2B3674"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAgregarTienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Nueva"
+            app:backgroundTint="#42A5F5"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="Asigna qué dispositivo captura los pagos de cada local."
+        android:textColor="#A3AED0"
+        android:textSize="13sp" />
+
+    <!-- Aquí se listarán dinámicamente las tiendas desde Supabase -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTiendas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
